@@ -8,7 +8,7 @@ import {
 import { useUnit } from "../../context/UnitContext";
 import { useCart } from "../../context/CartContext";
 
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/productcard/ProductCard";
 
 import "./Produtos.css";
 
