@@ -1,0 +1,49 @@
+.siarn-footer {
+  background: var(--color-text);
+  color: white;
+  margin-top: auto;
+}
+
+.siarn-footer-container {
+  align-items: center;
+  display: flex;
+  gap: var(--space-5);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: var(--space-6) var(--space-5);
+}
+
+.siarn-footer strong {
+  font-family: var(--font-heading);
+  font-size: 18px;
+}
+
+.siarn-footer p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-links span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .siarn-footer-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

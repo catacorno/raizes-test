@@ -1,0 +1,182 @@
+.siarn-navbar {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.siarn-navbar-container {
+  align-items: center;
+  display: flex;
+  gap: var(--space-5);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: 72px;
+  padding: 0 var(--space-5);
+}
+
+.siarn-logo {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.siarn-logo-icon {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.siarn-logo strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.siarn-logo small {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.siarn-nav-links {
+  align-items: center;
+  display: flex;
+  gap: var(--space-5);
+}
+
+.siarn-nav-links a {
+  align-items: center;
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: var(--space-2);
+  transition: 0.2s ease;
+}
+
+.siarn-nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.siarn-navbar-actions {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.navbar-icon-button {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  font-size: 21px;
+  justify-content: center;
+  position: relative;
+}
+
+.cart-badge {
+  align-items: center;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-surface);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 9px;
+  font-weight: 700;
+  height: 18px;
+  justify-content: center;
+  position: absolute;
+  right: -9px;
+  top: -8px;
+  width: 18px;
+}
+
+.navbar-user {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.navbar-user-icon {
+  align-items: center;
+  background: rgba(46, 125, 50, 0.1);
+  border-radius: 50%;
+  color: var(--color-primary);
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}
+
+.navbar-user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar-logout {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  font-size: 20px;
+}
+
+.navbar-logout:hover {
+  color: var(--color-danger);
+}
+
+@media (max-width: 900px) {
+  .siarn-nav-links {
+    display: none;
+  }
+
+  .navbar-user-name {
+    display: none;
+  }
+}
+
+.navbar-unit {
+  align-items: center;
+  background: rgba(46, 125, 50, 0.08);
+  border-radius: 20px;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 6px;
+  padding: 7px 11px;
+}
+
+.navbar-unit:hover {
+  background: rgba(46, 125, 50, 0.14);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 700px) {
+  .navbar-unit span {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .siarn-navbar-container {
+    padding: 0 var(--space-3);
+  }
+
+  .siarn-logo small {
+    display: none;
+  }
+
+  .siarn-navbar-actions {
+    gap: var(--space-4);
+  }
+}

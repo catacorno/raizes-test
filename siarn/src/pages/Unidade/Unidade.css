@@ -1,0 +1,133 @@
+.unit-page {
+  background: var(--color-background);
+  min-height: 100%;
+}
+
+.unit-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+.unit-hero {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(27, 94, 32, 0.98),
+      rgba(46, 125, 50, 0.9)
+    );
+  color: white;
+  padding: var(--space-8) 0;
+}
+
+.unit-hero span,
+.unit-section-heading span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.unit-hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  margin: var(--space-3) 0;
+}
+
+.unit-hero p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 600px;
+}
+
+.unit-list-section {
+  padding: var(--space-7) 0;
+}
+
+.current-unit {
+  align-items: center;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-7);
+  padding: var(--space-4) var(--space-5);
+}
+
+.current-unit small {
+  color: var(--color-primary);
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.current-unit strong {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.current-unit strong i {
+  color: var(--color-primary);
+}
+
+.current-unit button {
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-weight: 700;
+  padding: 11px 18px;
+}
+
+.current-unit button i {
+  margin-left: 8px;
+}
+
+.unit-section-heading {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.unit-section-heading span {
+  color: var(--color-primary);
+}
+
+.unit-section-heading h2 {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.unit-section-heading p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.units-grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .units-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .units-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .current-unit,
+  .unit-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

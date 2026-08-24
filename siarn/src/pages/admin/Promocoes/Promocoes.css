@@ -1,0 +1,383 @@
+.admin-promocoes {
+  width: 100%;
+}
+
+
+.admin-page-heading {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 20px;
+}
+
+
+.admin-page-heading > div > span,
+.promocoes-form-heading span,
+.promocoes-list-heading span {
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+
+.admin-page-heading h2 {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+
+.admin-page-heading p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+
+.promocoes-new-button {
+  align-items: center;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 8px;
+  padding: 12px 17px;
+}
+
+
+.promocoes-new-button:hover {
+  background: var(--color-primary-dark);
+}
+
+
+.promocoes-form-card,
+.promocoes-list-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+
+.promocoes-form-card {
+  margin-bottom: 22px;
+  padding: 25px;
+}
+
+
+.promocoes-form-heading,
+.promocoes-list-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+
+.promocoes-form-heading h3,
+.promocoes-list-heading h3 {
+  font-size: 18px;
+  margin: 5px 0 0;
+}
+
+
+.promocoes-close-button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+.promocoes-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+.promocoes-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+.promocoes-field-full {
+  grid-column: 1 / -1;
+}
+
+
+.promocoes-field label {
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+.promocoes-field input,
+.promocoes-field select,
+.promocoes-field textarea {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  padding: 11px 12px;
+  width: 100%;
+}
+
+
+.promocoes-field textarea {
+  resize: vertical;
+}
+
+
+.promocoes-field input:focus,
+.promocoes-field select:focus,
+.promocoes-field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+
+.promocoes-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+
+.promocoes-cancel-button,
+.promocoes-save-button {
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 11px 17px;
+}
+
+
+.promocoes-cancel-button {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+
+.promocoes-save-button {
+  align-items: center;
+  background: var(--color-primary);
+  border: none;
+  color: white;
+  display: flex;
+  gap: 7px;
+}
+
+
+.promocoes-list-card {
+  padding: 25px;
+}
+
+
+.promocoes-list-heading strong {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+.promocoes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.promocao-item {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 16px;
+  padding: 19px 0;
+}
+
+
+.promocao-icon {
+  align-items: center;
+  background: #e8f5e9;
+  border-radius: 10px;
+  color: var(--color-primary);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 19px;
+  height: 45px;
+  justify-content: center;
+  width: 45px;
+}
+
+
+.promocao-info {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.promocao-title {
+  align-items: center;
+  display: flex;
+  gap: 9px;
+}
+
+
+.promocao-title h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+
+.promocao-status {
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 8px;
+}
+
+
+.promocao-status.active {
+  background: #e8f5e9;
+  color: var(--color-primary);
+}
+
+
+.promocao-status.paused {
+  background: #f1f1f1;
+  color: var(--color-text-muted);
+}
+
+
+.promocao-info p {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  margin: 5px 0 10px;
+}
+
+
+.promocao-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+.promocao-meta span {
+  align-items: center;
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: 10px;
+  gap: 5px;
+}
+
+
+.promocao-meta i {
+  color: var(--color-primary);
+}
+
+
+.promocao-toggle {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 9px 13px;
+}
+
+
+.promocao-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+
+.promocoes-info {
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 17px;
+}
+
+
+.promocoes-info-icon {
+  color: var(--color-primary);
+  font-size: 17px;
+}
+
+
+.promocoes-info strong {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+
+.promocoes-info p {
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+
+  .promocoes-new-button {
+    justify-content: center;
+  }
+
+
+  .promocoes-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .promocoes-field-full {
+    grid-column: auto;
+  }
+
+
+  .promocao-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+
+  .promocao-info {
+    width: calc(100% - 61px);
+  }
+
+
+  .promocao-toggle {
+    margin-left: 61px;
+  }
+
+}
