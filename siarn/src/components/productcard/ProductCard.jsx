@@ -1,7 +1,12 @@
 import "./ProductCard.css";
 
-function ProductCard({ product, onAdd }) {
-  const unavailable = product.stock <= 0;
+function ProductCard({
+  product,
+  onAdd,
+  isAvailable = true,
+}) {
+  const unavailable =
+    !isAvailable || product.stock <= 0;
 
   return (
     <article className="product-card">

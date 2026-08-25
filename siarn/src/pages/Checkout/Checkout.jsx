@@ -5,6 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useCart } from "../../context/CartContext";
 import { useUnit } from "../../context/UnitContext";
 import { addUserPoints } from "../../services/auth";
+import { getProductAvailability } from "../../utils/productAdmin";
 
 import "./Checkout.css";
 
@@ -80,7 +81,22 @@ function Checkout() {
       navigate("/produtos");
       return;
     }
+      const unavailableItems = cartItems.filter((item) => {
+        const availability = getProductAvailability(
+          selectedUnit.id,
+          item.id
+        );
 
+        return availability === false;
+      });
+
+      if (unavailableItems.length > 0) {
+        alert(
+          `O produto "${unavailableItems[0].name}" não está mais disponível nesta unidade. Remova o item do carrinho para continuar.`
+        );
+
+        return;
+      }
     if (
       deliveryMethod === "delivery" &&
       !hasAddress

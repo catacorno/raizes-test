@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 
 import { PRODUCTS } from "../../data/products";
 import {
-  getAllProductAvailability,
+  getProductAvailability,
 } from "../../utils/productAdmin";
 import { useUnit } from "../../context/UnitContext";
 import { useCart } from "../../context/CartContext";
@@ -29,7 +29,6 @@ function Produtos() {
   const [category, setCategory] = useState(initialCategory);
   const [featuredOnly, setFeaturedOnly] = useState(initialFeatured);
 
-  const availability = getAllProductAvailability();
 
   const categories = [
     { id: "todos", name: "Todos" },
@@ -42,10 +41,16 @@ function Produtos() {
 const products = useMemo(() => {
   return PRODUCTS.filter((product) => {
 
-    const isAvailable =
-      availability[product.id] !== undefined
-        ? availability[product.id]
-        : product.stock > 0;
+   const unitAvailability = selectedUnit
+  ? getProductAvailability(
+      selectedUnit.id,
+      product.id
+    )
+  : null;
+      const isAvailable =
+        unitAvailability !== null
+          ? unitAvailability
+          : product.stock > 0;
 
       const belongsToUnit =
         !selectedUnit ||
